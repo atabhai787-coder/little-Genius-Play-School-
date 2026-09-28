@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Little Genius Play School - Play, Learn, Grow">
+<title>Little Genius Play School | Official Website</title>
+<style>
+:root{--navy:#082b68;--blue:#1167d9;--sky:#eaf5ff;--gold:#f7b718;--green:#19a463;--text:#172033;--muted:#667085;--white:#fff;--shadow:0 14px 40px rgba(8,43,104,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,"Noto Sans Devanagari",sans-serif;color:var(--text);background:#f8fbff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.top{background:var(--navy);color:#fff;font-size:14px;padding:8px 0}
+.top .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+header{background:#fff;position:sticky;top:0;z-index:20;box-shadow:0 3px 18px rgba(0,0,0,.07)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#0b4fae,#082b68);color:#ffd34d;border:3px solid #f5b91b;font-weight:900;font-size:18px}
+.brand strong{display:block;font-size:22px;color:var(--navy);line-height:1}
+.brand span{font-size:11px;color:#d08c00;font-weight:700;letter-spacing:1px}
+nav{display:flex;gap:22px;align-items:center}
+nav a{font-weight:700;color:#344054;font-size:14px}
+nav a:hover{color:var(--blue)}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;background:var(--blue);color:#fff;font-weight:800;box-shadow:0 8px 20px rgba(17,103,217,.2);border:0;cursor:pointer}
+.btn.gold{background:var(--gold);color:#172033}
+.menu{display:none;background:none;border:0;font-size:28px;color:var(--navy)}
+.hero{padding:72px 0 55px;background:radial-gradient(circle at 85% 15%,#fff1b9 0 9%,transparent 10%),linear-gradient(135deg,#edf7ff,#fff)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px}
+.badge{display:inline-block;background:#e2f4eb;color:#087b48;padding:7px 13px;border-radius:30px;font-weight:800;font-size:13px;margin-bottom:15px}
+h1{font-size:clamp(38px,5vw,64px);line-height:1.04;color:var(--navy);margin-bottom:16px}
+h1 em{color:#e39c00;font-style:normal}
+.hero p{font-size:18px;color:#526071;max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.hero-card{background:#fff;border-radius:28px;padding:28px;box-shadow:var(--shadow);border:1px solid #e4edf8}
+.school-mark{aspect-ratio:1/1;border-radius:24px;background:linear-gradient(145deg,#0b4fae,#082b68);display:grid;place-items:center;color:white;text-align:center;padding:30px;position:relative;overflow:hidden}
+.school-mark:before{content:"";position:absolute;width:210px;height:210px;border:28px solid rgba(255,255,255,.09);border-radius:50%;top:-80px;right:-70px}
+.school-mark .cap{font-size:58px}.school-mark h2{font-size:34px;line-height:1.05}.school-mark b{color:#ffd34d}
+.stats{margin-top:25px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:#fff;border-radius:14px;padding:15px;text-align:center;border:1px solid #e6edf5}.stat b{display:block;color:var(--navy);font-size:22px}.stat span{font-size:12px;color:var(--muted)}
+section{padding:72px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 35px}.section-head h2{font-size:34px;color:var(--navy);margin-bottom:8px}.section-head p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid #e6edf5;border-radius:18px;padding:25px;box-shadow:0 8px 25px rgba(8,43,104,.06)}
+.icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#eaf5ff;color:var(--blue);font-size:23px;margin-bottom:14px}
+.card h3{color:var(--navy);margin-bottom:7px}.card p{color:var(--muted);font-size:14px}
+.classes{background:#f0f7ff}.class-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.class{background:#fff;padding:20px;border-radius:16px;text-align:center;font-weight:800;color:var(--navy);border:1px solid #dfeaf6}.class small{display:block;color:#7b8797;margin-top:3px;font-weight:500}
+.fee{overflow:auto}.fee table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}th,td{padding:14px 16px;border-bottom:1px solid #edf1f5;text-align:left}th{background:var(--navy);color:#fff}td:last-child{font-weight:800;color:#087b48}
+.admission{background:linear-gradient(135deg,#082b68,#126bdc);color:#fff}.admission .section-head h2,.admission .section-head p{color:#fff}.admission-box{background:#fff;color:var(--text);padding:28px;border-radius:20px;max-width:760px;margin:auto}.form{display:grid;grid-template-columns:1fr 1fr;gap:15px}.form label{font-size:13px;font-weight:700;color:#344054}.form input,.form select,.form textarea{width:100%;padding:12px;border:1px solid #d5dce5;border-radius:9px;margin-top:5px;font:inherit}.full{grid-column:1/-1}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.contact-card{background:#fff;border-radius:18px;padding:28px;border:1px solid #e5edf7}.contact-row{display:flex;gap:13px;margin:16px 0}.contact-row strong{display:block;color:var(--navy)}.contact-row span{color:var(--muted);font-size:14px}
+footer{background:#061f4c;color:#cbd7e8;padding:28px 0}.footer-grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-brand{color:#fff;font-size:20px;font-weight:800}.copy{font-size:13px}
+.whatsapp{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#19a463;color:#fff;font-size:25px;box-shadow:0 8px 24px rgba(0,0,0,.2);z-index:30}
+@media(max-width:800px){nav{display:none;position:absolute;left:0;right:0;top:76px;background:#fff;padding:15px 5%;flex-direction:column;box-shadow:0 12px 20px rgba(0,0,0,.08)}nav.open{display:flex}.menu{display:block}.hero-grid,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.class-grid{grid-template-columns:1fr 1fr}.hero{padding-top:45px}.stats{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}.form{grid-template-columns:1fr}.full{grid-column:auto}.top .container{justify-content:center}.stats{gap:7px}.stat{padding:11px 5px}.stat b{font-size:18px}section{padding:55px 0}}
+</style>
+</head>
+<body>
+<div class="top"><div class="container"><span>📍 Khirkiya Road, Padrauna, Kushinagar</span><span>📞 9984041405 &nbsp;|&nbsp; 73807525811</span></div></div>
+
+<header><div class="container nav">
+<a class="brand" href="#home"><div class="logo">LG</div><div><strong>Little Genius</strong><span>PLAY SCHOOL • PLAY • LEARN • GROW</span></div></a>
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">☰</button>
+<nav>
+<a href="#home">Home</a><a href="#about">About</a><a href="#classes">Classes</a><a href="#fee">Fee</a><a href="#admission">Admission</a><a href="#contact">Contact</a>
+</nav>
+<a class="btn" href="#admission">Admission Open</a>
+</div></header>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+<div>
+<span class="badge">✨ Admissions • Play Way to Class 8</span>
+<h1>Where Little Minds<br><em>Grow Big Dreams.</em></h1>
+<p><b>Little Genius Play School</b> में सीखना सिर्फ किताबों तक सीमित नहीं है। हमारा लक्ष्य बच्चों के लिए सुरक्षित, खुशहाल और सीखने वाला वातावरण बनाना है।</p>
+<div class="actions"><a class="btn" href="#admission">Admission Enquiry</a><a class="btn gold" href="#classes">View Classes</a></div>
+<div class="stats"><div class="stat"><b>Play–8</b><span>Classes</span></div><div class="stat"><b>Safe</b><span>Child Friendly</span></div><div class="stat"><b>Care</b><span>Learning Focus</span></div></div>
+</div>
+<div class="hero-card"><div class="school-mark"><div><div class="cap">🎓</div><h2>Little <b>Genius</b></h2><h3>PLAY SCHOOL</h3><p style="margin-top:10px;color:#d9e8ff">Play • Learn • Grow</p></div></div></div>
+</div></section>
+
+<section id="about"><div class="container"><div class="section-head"><h2>हमारे बारे में</h2><p>एक ऐसा school environment जहाँ बच्चे confidence, creativity और अच्छे habits के साथ आगे बढ़ें।</p></div>
+<div class="cards">
+<div class="card"><div class="icon">🎯</div><h3>Our Vision</h3><p>हर बच्चे की क्षमता को पहचानकर उसे सीखने और आगे बढ़ने का अवसर देना।</p></div>
+<div class="card"><div class="icon">🧒</div><h3>Child Friendly</h3><p>बच्चों के लिए caring, safe और activity-based learning environment।</p></div>
+<div class="card"><div class="icon">📚</div><h3>Learning</h3><p>Age-appropriate academics के साथ activities, communication और creativity पर ध्यान।</p></div>
+</div></div></section>
+
+<section id="classes" class="classes"><div class="container"><div class="section-head"><h2>Classes</h2><p>Play Way से Class 8 तक बच्चों के लिए structured learning journey.</p></div>
+<div class="class-grid">
+<div class="class">Play Group<small>Early Learning</small></div><div class="class">Nursery<small>Foundation</small></div><div class="class">LKG<small>Foundation</small></div><div class="class">UKG<small>Foundation</small></div>
+<div class="class">Class 1<small>Primary</small></div><div class="class">Class 2<small>Primary</small></div><div class="class">Class 3<small>Primary</small></div><div class="class">Class 4<small>Primary</small></div>
+<div class="class">Class 5<small>Primary</small></div><div class="class">Class 6<small>Middle</small></div><div class="class">Class 7<small>Middle</small></div><div class="class">Class 8<small>Middle</small></div>
+</div></div></section>
+
+<section id="fee"><div class="container"><div class="section-head"><h2>Fee Structure</h2><p>नीचे प्रारंभिक अनुमानित monthly tuition fee दी गई है। Final charges school policy के अनुसार update किए जा सकते हैं।</p></div>
+<div class="fee"><table><thead><tr><th>Class</th><th>Monthly Fee</th><th>Admission Fee</th></tr></thead><tbody>
+<tr><td>Play Group</td><td>₹600</td><td>₹1,000</td></tr><tr><td>Nursery</td><td>₹600</td><td>₹1,000</td></tr><tr><td>LKG</td><td>₹650</td><td>₹1,000</td></tr><tr><td>UKG</td><td>₹700</td><td>₹1,000</td></tr>
+<tr><td>Class 1–2</td><td>₹700</td><td>₹1,200</td></tr><tr><td>Class 3–4</td><td>₹750</td><td>₹1,200</td></tr><tr><td>Class 5</td><td>₹800</td><td>₹1,200</td></tr><tr><td>Class 6</td><td>₹850</td><td>₹1,500</td></tr><tr><td>Class 7</td><td>₹900</td><td>₹1,500</td></tr><tr><td>Class 8</td><td>₹950</td><td>₹1,500</td></tr>
+</tbody></table></div></div></section>
+
+<section id="admission" class="admission"><div class="container"><div class="section-head"><h2>Admission Enquiry</h2><p>अपने बच्चे की जानकारी भरें। यह form enquiry के लिए है।</p></div>
+<div class="admission-box"><form class="form" onsubmit="submitForm(event)">
+<label>Student Name<input required placeholder="बच्चे का नाम"></label>
+<label>Parent Name<input required placeholder="अभिभावक का नाम"></label>
+<label>Class<select required><option value="">Select Class</option><option>Play Group</option><option>Nursery</option><option>LKG</option><option>UKG</option><option>Class 1</option><option>Class 2</option><option>Class 3</option><option>Class 4</option><option>Class 5</option><option>Class 6</option><option>Class 7</option><option>Class 8</option></select></label>
+<label>Mobile Number<input required type="tel" placeholder="10 digit mobile number"></label>
+<label class="full">Message<textarea rows="3" placeholder="कोई सवाल या जानकारी..."></textarea></label>
+<button class="btn full" type="submit">Send Enquiry</button>
+</form><p id="msg" style="margin-top:12px;color:#087b48;font-weight:700"></p></div></div></section>
+
+<section id="contact"><div class="container"><div class="section-head"><h2>Contact Us</h2><p>Admission या school information के लिए संपर्क करें।</p></div>
+<div class="contact-grid"><div class="contact-card">
+<div class="contact-row"><div class="icon">📍</div><div><strong>Address</strong><span>Khirkiya Road, Padrauna, Kushinagar</span></div></div>
+<div class="contact-row"><div class="icon">📞</div><div><strong>Mobile</strong><span>9984041405 / 73807525811</span></div></div>
+<div class="contact-row"><div class="icon">👤</div><div><strong>Owner</strong><span>....................................</span></div></div>
+<div class="contact-row"><div class="icon">👩‍🏫</div><div><strong>Principal</strong><span>....................................</span></div></div>
+</div><div class="contact-card"><h3 style="color:#082b68;margin-bottom:12px">School Hours</h3><p style="color:#667085">Monday – Saturday<br><b style="color:#172033">08:00 AM – 02:00 PM</b></p><hr style="margin:20px 0;border:0;border-top:1px solid #edf1f5"><p style="color:#667085">Office / Admission Enquiry<br><b style="color:#172033">09:00 AM – 04:00 PM</b></p></div></div></div></section>
+</main>
+
+<footer><div class="container footer-grid"><div><div class="footer-brand">Little Genius Play School</div><div class="copy">Play • Learn • Grow</div></div><div class="copy">© 2026 Little Genius Play School. All Rights Reserved.</div></div></footer>
+<a class="whatsapp" href="https://wa.me/919984041405" target="_blank" aria-label="WhatsApp">✆</a>
+<script>
+function submitForm(e){e.preventDefault();document.getElementById('msg').textContent='धन्यवाद! आपकी enquiry तैयार है। कृपया school office से संपर्क करके details confirm करें।';}
+</script>
+</body>
+</html>
